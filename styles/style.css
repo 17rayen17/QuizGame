@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0 solid transparent;
+}
+
+/* prevent iOS font size change*/
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* reset body line-height*/
+body {
+  min-height: 100vh;
+  line-height: 1;
+  text-rendering: optimizeSpeed;
+  color: black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 1) 47%,
+    rgba(0, 89, 255, 1) 100%,
+    rgba(255, 255, 255, 1) 100%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  box-shadow: 0px 0px 5px 1px rgba(130, 130, 130, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(130, 130, 130, 0.75);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(130, 130, 130, 0.75);
+  width: 900px;
+  border-radius: 8px;
+}
+
+main .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 20px 10px;
+}
+
+main .head .Category {
+  font-weight: bold;
+}
+
+main .question {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px 10px;
+  margin: 0 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
+}
+
+main .question .answers {
+  border-radius: 8px;
+}
+
+main .question .answers div {
+  background-color: #eeeeee9a;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+main .question .answers div > input[type="radio"]:checked ~ label {
+  color: #0059ff;
+  font-weight: bold;
+}
+
+main .question .answers div label {
+  cursor: pointer;
+}
+
+main .question .answers div:last-child {
+  border: none;
+}
+
+main .question button {
+  background-color: #0059ff;
+  width: 100%;
+  padding: 10px 0;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 8px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+main .question button:hover {
+  filter: brightness(90%);
+}
+
+main .foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 20px 10px;
+}
+
+main .foot .spans {
+  display: flex;
+  gap: 10px;
+}
+
+main .foot .spans span {
+  background-color: #ccc;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.active {
+  background-color: #0059ff !important;
+}
+
+.result {
+  margin: 5px 0 5px 15px;
+}
+
+.result p {
+  font-weight: 600;
+}
+
+.result p .perfect {
+  font-weight: bold;
+  font-size: 20px;
+  color: #0059ff;
+}
+
+.result p .bad {
+  font-weight: bold;
+  font-size: 20px;
+  color: #dc0a0a;
+}
+
+.result p .good {
+  font-weight: bold;
+  font-size: 20px;
+  color: #009688;
+}
